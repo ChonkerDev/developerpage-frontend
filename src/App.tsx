@@ -1,17 +1,24 @@
-import { useState } from 'react';
+import React from 'react';
+import TopBar from './components/TopBar';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>Welcome to My Developer Page</h1>
-      <p>This is a simple web page built with React + TypeScript + Vite.</p>
-
-      <button onClick={() => setCount(count + 1)}>
-        You clicked {count} times
-      </button>
+    
+    <div style={{ padding: 20, color: 'white', backgroundColor: '#1A1B1E', minHeight: '100vh' }}>
+      <TopBar />
+      <h1>Hello, Mantine + React!</h1>
+      <p>This is your barebones app.</p>
+      <video
+        controls
+        preload="metadata"
+        width="640"
+        height="360"
+        src="http://localhost:5140/api/VideoFetch/projectlilithsample1"
+      >
+        Your browser does not support the video tag.
+      </video>
     </div>
+
   );
 }
 

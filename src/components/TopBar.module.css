@@ -1,0 +1,84 @@
+:root {
+    --header-height: 56px;
+}
+
+.header {
+    height: var(--header-height);
+    margin-bottom: 16px;
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    background-color: var(--mantine-color-dark-7);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* pushes left and right to edges */
+    height: var(--header-height);
+    padding: 0 16px;
+    /* optional padding for spacing */
+}
+
+.left {
+    flex: 1;
+    /* takes available space */
+    display: flex;
+    justify-content: flex-start;
+    /* aligns content to left */
+    align-items: center;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* aligns right content to the right */
+    align-items: center;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: var(--mantine-radius-sm);
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Hover state */
+.link:hover {
+    background-color: #444;
+    /* dark gray */
+    color: white;
+}
+
+/* Active link styling */
+[data-mantine-color-scheme] &[data-active] {
+    background-color: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-white);
+}
+
+.active {
+    background-color: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-white);
+}
+
+.logo {
+    height: 100%;
+    max-height: var(--header-height);
+    /* match your topbar height */
+    object-fit: contain;
+    display: block;
+}
