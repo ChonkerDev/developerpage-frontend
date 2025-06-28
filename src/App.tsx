@@ -9,6 +9,8 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact'
 import ProjectProjectLilith from './pages/Projects/ProjectProjectLilith';
 import ProjectSynthRace from './pages/Projects/ProjectSynthRace';
+import ProjectOverview from './pages/Projects/ProjectOverview';
+
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         <Route path="/" element={<Navigate to="/home" replace />} /> {/* auto route to home when entering site initially */}
         <Route path="/home" element={<Home />} />
         <Route path="/projects" element={<Projects />}>
-          <Route index element={<Navigate to="projectsynthrace" replace />} />
+          <Route index element={<Navigate to="projectoverview" replace />} />
+          <Route path="projectoverview" element = {<ProjectOverview />} />
           <Route path="projectprojectlilith" element={<ProjectProjectLilith />} />
           <Route path="projectsynthrace" element={<ProjectSynthRace />} />
         </Route>
