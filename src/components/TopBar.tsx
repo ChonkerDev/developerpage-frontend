@@ -5,10 +5,12 @@ import { NavLink } from 'react-router-dom';
 import classes from './TopBar.module.css';
 
 const links = [
-    { link: '/about', label: 'Features' },
-    { link: '/pricing', label: 'Pricing' },
-    { link: '/learn', label: 'Learn' },
-    { link: '/community', label: 'Community' },
+    { link: '/home', label: 'Home' },
+    { link: '/projects', label: 'Projects' },
+    { link: '/resume', label: 'Resume' },
+    { link: '/workhistory', label: 'Work History' },
+    { link: '/contact', label: 'Contact' },
+
 ];
 
 export function TopBar() {
